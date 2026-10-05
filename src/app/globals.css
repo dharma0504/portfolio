@@ -1,26 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Handjet:ELGR,ELSH,wght@1..2,0..16,100..900&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Mojangles';
+  src: url('/fonts/Mojangles.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mojangles';
+  src: url('/fonts/Mojangles-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mojangles';
+  src: url('/fonts/Mojangles-Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Palette directly from portfoliofy.io/preview/creative-artsy (Crayon theme) */
+  --ca-surface: #F8F8F5;
+  --ca-ink: #191510;
+  --ca-gray: #857b69;
+  --ca-chrome: #ece3d1;
+  --ca-tick: #c0b49d;
+  --ca-grid-dot: rgba(25, 30, 45, 0.12);
+  --ca-grid-line: rgba(25, 30, 45, 0.08);
+
+  --ca-yellow: #f7c948;
+  --ca-yellow-soft: #f3e2ad;
+  --ca-tan: #f3e2ad;
+  --ca-orange: #ff6a35;
+  --ca-pink: #ff4d8d;
+  --ca-pink-soft: #ffc6da;
+  --ca-magenta: #ff4d8d;
+  --ca-green: #16b06a;
+  --ca-mint: #a9dfc6;
+  --ca-blue: #2b57d6;
+  --ca-cyan: #b7c6ef;
+  --ca-purple: #c4b5fd;
+  --ca-brown: #5c3a2e;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Authentic Ruled Notebook Paper - Full Screen Background */
+html {
+  scroll-behavior: smooth;
+  background-color: #F8F8F5;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 31px,
+    rgba(25, 30, 45, 0.12) 31px,
+    rgba(25, 30, 45, 0.12) 32px
+  );
+  color: var(--ca-ink);
+  min-height: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #F8F8F5;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 31px,
+    rgba(25, 30, 45, 0.12) 31px,
+    rgba(25, 30, 45, 0.12) 32px
+  );
+  color: var(--ca-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+/* Signature ruled notebook paper pattern */
+.ca-grid,
+.notebook-ruled-bg {
+  background-color: #F8F8F5;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 31px,
+    rgba(25, 30, 45, 0.12) 31px,
+    rgba(25, 30, 45, 0.12) 32px
+  );
+}
+
+/* Hand-drawn organic border doodle from creative-artsy */
+.ca-doodle-box {
+  border-radius: 255px 15px 225px/15px 225px 15px 255px;
+}
+
+/* Typography classes */
+.font-pixel,
+.ca-display {
+  font-family: 'Mojangles', 'Handjet', monospace;
+  font-weight: 700;
+}
+
+.font-hand {
+  font-family: 'Caveat', cursive;
+}
+
+.font-ca-mono {
+  font-family: 'DM Mono', monospace;
+}
+
+.font-heading {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Semi-transparent washi tape strip */
+.ca-tape {
+  position: absolute;
+  width: 72px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(25, 21, 16, 0.12);
+  box-shadow: 0 1.5px 3px rgba(25, 21, 16, 0.15);
+  z-index: 20;
+  pointer-events: none;
+}
+
+.ca-tape-blue {
+  background-color: rgba(183, 198, 239, 0.78);
+}
+
+.ca-tape-yellow {
+  background-color: rgba(243, 226, 173, 0.78);
+}
+
+.ca-tape-pink {
+  background-color: rgba(254, 205, 211, 0.82);
+}
+
+.ca-tape-mint {
+  background-color: rgba(186, 237, 219, 0.82);
+}
+
+/* Folder tab trapezoid clip-path */
+.ca-folder-tab {
+  clip-path: polygon(24px 0, calc(100% - 24px) 0, 100% 100%, 0 100%);
+}
+
+.ca-folder-tab-lg {
+  clip-path: polygon(44px 0, calc(100% - 44px) 0, 100% 100%, 0 100%);
+}
+
+/* Pop sticker shadow */
+.pop-shadow {
+  box-shadow: 3px 3px 0px rgba(25, 21, 16, 0.9);
+}
+
+.pop-shadow-sm {
+  box-shadow: 2px 2px 0px rgba(25, 21, 16, 0.9);
+}
+
+.pop-shadow-lg {
+  box-shadow: 5px 5px 0px rgba(25, 21, 16, 0.9);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ca-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0b49d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #857b69;
+}
+
+/* Torn / scalloped paper ribbon clip-path */
+.torn-ribbon {
+  clip-path: polygon(
+    0% 0%, 
+    100% 0%, 
+    97% 10%, 100% 20%, 97% 30%, 100% 40%, 97% 50%, 100% 60%, 97% 70%, 100% 80%, 97% 90%, 100% 100%, 
+    0% 100%, 
+    3% 90%, 0% 80%, 3% 70%, 0% 60%, 3% 50%, 0% 40%, 3% 30%, 0% 20%, 3% 10%
+  );
+}
+
+/* Torn / scalloped square sticker clip-path */
+.torn-sticker {
+  clip-path: polygon(
+    0% 0%, 25% 4%, 50% 0%, 75% 4%, 100% 0%,
+    96% 25%, 100% 50%, 96% 75%, 100% 100%,
+    75% 96%, 50% 100%, 25% 96%, 0% 100%,
+    4% 75%, 0% 50%, 4% 25%
+  );
 }
