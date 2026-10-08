@@ -10,13 +10,13 @@ export default function Hero() {
     <section className="relative pt-12 pb-16 md:pt-16 md:pb-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Scrapbook Header: "my name is" handwritten with squiggle */}
-        <div className="inline-block relative mb-4">
+        <div className="flex flex-col items-center justify-center mb-3 sm:mb-4">
           <span className="font-hand text-3xl sm:text-4xl text-[var(--ca-ink)] block select-none">
             my name is
           </span>
           {/* Hand-drawn double underline squiggle */}
           <svg
-            className="w-24 h-3 mx-auto text-[var(--ca-ink)] -mt-1"
+            className="w-24 h-3 text-[var(--ca-ink)] -mt-1"
             viewBox="0 0 100 12"
             fill="none"
             stroke="currentColor"
@@ -28,62 +28,54 @@ export default function Hero() {
           </svg>
         </div>
 
-        {/* Big Pixel Name Box with Pinned Stickers (Signature Creative Artsy Hero) */}
-        <div className="relative inline-block my-3 sm:my-4 max-w-full">
-          {/* Pinned Sticker: Top-Left */}
-          <div className="absolute -top-5 left-0 xs:-left-3 sm:-top-8 sm:-left-12 rotate-[-5deg] z-20">
-            <span className="inline-block px-2 py-0.5 xs:px-3 xs:py-1 rounded-full border-2 border-[var(--ca-ink)] bg-[var(--ca-mint)] font-ca-mono text-[9px] xs:text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[var(--ca-ink)] pop-shadow-sm">
-              MADE SYSTEMS
-            </span>
-          </div>
+        {/* Big Name Box with Pinned Stickers (Centered & Symmetrically Balanced) */}
+        <div className="flex flex-col items-center justify-center my-4 sm:my-6 w-full">
+          <div className="relative inline-flex items-center justify-center max-w-full group">
+            {/* Pinned Sticker: Top-Left */}
+            <div className="absolute -top-4 sm:-top-6 left-1 sm:-left-4 rotate-[-4deg] z-20 pointer-events-none">
+              <span className="inline-block px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full border-2 border-[var(--ca-ink)] bg-[var(--ca-mint)] font-ca-mono text-[9px] xs:text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[var(--ca-ink)] pop-shadow-sm">
+                MADE SYSTEMS
+              </span>
+            </div>
 
-          {/* Pinned Sticker: Top-Right */}
-          <div className="absolute -top-5 right-0 xs:-right-3 sm:-top-8 sm:-right-12 rotate-[4deg] z-20">
-            <span className="inline-block px-2 py-0.5 xs:px-3 xs:py-1 rounded-full border-2 border-[var(--ca-ink)] bg-[var(--ca-yellow-soft)] font-ca-mono text-[9px] xs:text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[var(--ca-ink)] pop-shadow-sm">
-              SWEAT THE DETAILS
-            </span>
-          </div>
+            {/* Pinned Sticker: Top-Right */}
+            <div className="absolute -top-4 sm:-top-6 right-1 sm:-right-4 rotate-[4deg] z-20 pointer-events-none">
+              <span className="inline-block px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full border-2 border-[var(--ca-ink)] bg-[var(--ca-yellow-soft)] font-ca-mono text-[9px] xs:text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[var(--ca-ink)] pop-shadow-sm">
+                SWEAT THE DETAILS
+              </span>
+            </div>
 
-          {/* Center Name Box in Berghan Font */}
-          <div
-            className="ca-doodle-box relative inline-block border-[2.5px] sm:border-[3.5px] px-3.5 py-1.5 xs:px-6 xs:py-2 sm:px-12 sm:py-4 bg-[var(--ca-surface)] shadow-md max-w-full overflow-hidden"
-            style={{ borderColor: "var(--ca-orange)" }}
-          >
-            <span className="font-berghan text-[34px] xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight sm:tracking-normal text-[var(--ca-ink)] leading-none select-none block uppercase">
-              DHARMATEJ
-            </span>
-          </div>
-
-          {/* Pinned Sticker: Bottom-Left */}
-          <div className="absolute -bottom-4 left-0 xs:-left-2 sm:-bottom-6 sm:-left-10 rotate-[-3deg] z-20">
-            <span className="inline-block px-2 py-0.5 xs:px-3 xs:py-1 rounded-md border-2 border-[var(--ca-ink)] bg-[var(--ca-yellow)] font-hand text-xs xs:text-sm sm:text-lg font-bold text-[var(--ca-ink)] pop-shadow-sm">
-              Software Engineer
-            </span>
-          </div>
-
-          {/* Status Badge: Bottom-Center */}
-          <div className="hidden sm:inline-block absolute -bottom-5 left-1/2 -translate-x-1/2 z-20">
-            <span className="inline-flex items-center space-x-1.5 px-3 py-0.5 rounded-full border border-[var(--ca-ink)] bg-white font-ca-mono text-[11px] font-bold text-[var(--ca-ink)] shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-[var(--ca-blue)] animate-pulse" />
-              <span>OPEN TO OPPORTUNITIES · 2026 GRADUATE</span>
-            </span>
-          </div>
-
-          {/* Pinned Sticker: Bottom-Right with Arrow */}
-          <div className="absolute -bottom-4 right-0 xs:-right-2 sm:-bottom-7 sm:-right-10 rotate-[5deg] z-20 flex items-center space-x-1">
-            <svg
-              className="w-4 h-4 text-[var(--ca-ink)] -scale-x-100 hidden sm:block"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
+            {/* Center Name Box in Berghan Font */}
+            <div
+              className="ca-doodle-box relative flex items-center justify-center text-center border-[2.5px] sm:border-[3.5px] px-6 py-2.5 xs:px-10 xs:py-3.5 sm:px-16 sm:py-5 bg-[var(--ca-surface)] shadow-md max-w-full transition-transform hover:scale-[1.01] duration-200"
+              style={{ borderColor: "var(--ca-orange)" }}
             >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-            <span className="inline-block px-2 py-0.5 xs:px-2.5 xs:py-1 rounded border-2 border-[var(--ca-ink)] bg-[var(--ca-mint)] font-ca-mono text-[9px] xs:text-[10px] sm:text-xs font-bold text-[var(--ca-ink)] pop-shadow-sm">
-              Bangalore, IN
-            </span>
+              <span className="font-berghan text-[36px] xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-normal text-[var(--ca-ink)] leading-none select-none block uppercase text-center mx-auto">
+                DHARMATEJ
+              </span>
+            </div>
+
+            {/* Pinned Sticker: Bottom-Left */}
+            <div className="absolute -bottom-3.5 sm:-bottom-5 left-1 sm:-left-3 rotate-[-3deg] z-20 pointer-events-none">
+              <span className="inline-block px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md border-2 border-[var(--ca-ink)] bg-[var(--ca-yellow)] font-hand text-xs xs:text-sm sm:text-lg font-bold text-[var(--ca-ink)] pop-shadow-sm">
+                Software Engineer
+              </span>
+            </div>
+
+            {/* Status Badge: Bottom-Center */}
+            <div className="hidden sm:inline-block absolute -bottom-5 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
+              <span className="inline-flex items-center space-x-1.5 px-3 py-0.5 rounded-full border border-[var(--ca-ink)] bg-[var(--ca-surface)] font-ca-mono text-[11px] font-bold text-[var(--ca-ink)] shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-[var(--ca-blue)] animate-pulse" />
+                <span>OPEN TO OPPORTUNITIES · 2026 GRADUATE</span>
+              </span>
+            </div>
+
+            {/* Pinned Sticker: Bottom-Right */}
+            <div className="absolute -bottom-3.5 sm:-bottom-5 right-1 sm:-right-3 rotate-[3deg] z-20 pointer-events-none">
+              <span className="inline-block px-2.5 py-0.5 sm:px-3 sm:py-1 rounded border-2 border-[var(--ca-ink)] bg-[var(--ca-mint)] font-ca-mono text-[9px] xs:text-[10px] sm:text-xs font-bold text-[var(--ca-ink)] pop-shadow-sm">
+                Bangalore, IN
+              </span>
+            </div>
           </div>
         </div>
 

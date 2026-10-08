@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Download, Heart, Mail, Menu, Star, X } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 import { personalInfo } from "@/data/portfolioData";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -19,7 +20,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b-2 border-[var(--ca-ink)] bg-[#F8F8F5]/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b-2 border-[var(--ca-ink)] bg-[var(--ca-surface)]/90 backdrop-blur-md">
       <div className="flex items-stretch justify-between px-2 xs:px-3 sm:px-6 max-w-7xl mx-auto">
         {/* Left Tabs (Inspired by Creative Artsy Navigation) */}
         <nav className="flex items-stretch divide-x-2 divide-[var(--ca-ink)] border-x-2 border-[var(--ca-ink)]">
@@ -91,6 +92,9 @@ export default function Navbar() {
             <Mail className="w-3.5 h-3.5" />
           </a>
 
+          {/* Theme Toggle (Light / Dark mode) */}
+          <ThemeToggle />
+
           {/* Resume Download Pill */}
           <a
             href={personalInfo.contact.resumeUrl}
@@ -125,7 +129,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="sm:hidden border-t-2 border-[var(--ca-ink)] bg-[#F8F8F5] px-4 py-4 space-y-3 font-ca-mono text-xs shadow-lg animate-in slide-in-from-top-2 duration-150">
+        <div className="sm:hidden border-t-2 border-[var(--ca-ink)] bg-[var(--ca-surface)] px-4 py-4 space-y-3 font-ca-mono text-xs shadow-lg animate-in slide-in-from-top-2 duration-150">
           <div className="flex items-center justify-between pb-2 border-b border-[var(--ca-ink)]/15">
             <span className="text-[10px] font-bold text-[var(--ca-gray)] uppercase tracking-wider">
               NAVIGATION MENU
@@ -170,8 +174,12 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Resume PDF Download Link for Mobile */}
-          <div className="pt-2 border-t border-[var(--ca-ink)]/20 flex flex-col gap-2">
+          {/* Theme & Resume PDF Download Link for Mobile */}
+          <div className="pt-2 border-t border-[var(--ca-ink)]/20 flex flex-col gap-2.5">
+            <div className="flex items-center justify-between px-1">
+              <span className="font-ca-mono text-xs font-bold text-[var(--ca-ink)] uppercase">APPEARANCE</span>
+              <ThemeToggle showLabel className="px-3 py-1.5 rounded-full border-2 border-[var(--ca-ink)] bg-[var(--ca-surface)] flex items-center justify-center text-[var(--ca-ink)] text-xs shadow-xs" />
+            </div>
             <a
               href={personalInfo.contact.resumeUrl}
               target="_blank"

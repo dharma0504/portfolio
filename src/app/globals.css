@@ -36,12 +36,14 @@
 :root {
   /* Palette directly from portfoliofy.io/preview/creative-artsy (Crayon theme) */
   --ca-surface: #F8F8F5;
+  --ca-surface-card: #FFFFFF;
   --ca-ink: #191510;
-  --ca-gray: #857b69;
+  --ca-gray: #7a705e;
   --ca-chrome: #ece3d1;
   --ca-tick: #c0b49d;
   --ca-grid-dot: rgba(25, 30, 45, 0.12);
   --ca-grid-line: rgba(25, 30, 45, 0.08);
+  --ca-shadow: rgba(25, 21, 16, 0.9);
 
   --ca-yellow: #f7c948;
   --ca-yellow-soft: #f3e2ad;
@@ -58,16 +60,43 @@
   --ca-brown: #5c3a2e;
 }
 
+html.dark,
+[data-theme="dark"] {
+  --ca-surface: #141417;
+  --ca-surface-card: #1c1c22;
+  --ca-ink: #f5f4ef;
+  --ca-gray: #a39e94;
+  --ca-chrome: #26252c;
+  --ca-tick: #3e3d46;
+  --ca-grid-dot: rgba(255, 255, 255, 0.08);
+  --ca-grid-line: rgba(255, 255, 255, 0.05);
+  --ca-shadow: rgba(0, 0, 0, 0.95);
+
+  --ca-yellow: #fbbf24;
+  --ca-yellow-soft: #78350f;
+  --ca-tan: #292524;
+  --ca-orange: #fb923c;
+  --ca-pink: #f472b6;
+  --ca-pink-soft: #881337;
+  --ca-magenta: #fb7185;
+  --ca-green: #34d399;
+  --ca-mint: #065f46;
+  --ca-blue: #3b82f6;
+  --ca-cyan: #38bdf8;
+  --ca-purple: #a78bfa;
+  --ca-brown: #d97706;
+}
+
 /* Authentic Ruled Notebook Paper - Full Screen Background */
 html {
   scroll-behavior: smooth;
-  background-color: #F8F8F5;
+  background-color: var(--ca-surface);
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 0px,
     transparent 31px,
-    rgba(25, 30, 45, 0.12) 31px,
-    rgba(25, 30, 45, 0.12) 32px
+    var(--ca-grid-dot) 31px,
+    var(--ca-grid-dot) 32px
   );
   color: var(--ca-ink);
   min-height: 100%;
@@ -77,13 +106,13 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: #F8F8F5;
+  background-color: var(--ca-surface);
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 0px,
     transparent 31px,
-    rgba(25, 30, 45, 0.12) 31px,
-    rgba(25, 30, 45, 0.12) 32px
+    var(--ca-grid-dot) 31px,
+    var(--ca-grid-dot) 32px
   );
   color: var(--ca-ink);
   -webkit-font-smoothing: antialiased;
@@ -93,19 +122,21 @@ body {
   min-height: 100vh;
   max-width: 100%;
   overflow-x: clip;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 /* Signature ruled notebook paper pattern */
 .ca-grid,
 .notebook-ruled-bg {
-  background-color: #F8F8F5;
+  background-color: var(--ca-surface);
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 0px,
     transparent 31px,
-    rgba(25, 30, 45, 0.12) 31px,
-    rgba(25, 30, 45, 0.12) 32px
+    var(--ca-grid-dot) 31px,
+    var(--ca-grid-dot) 32px
   );
+  transition: background-color 0.2s ease;
 }
 
 /* Hand-drawn organic border doodle from creative-artsy */
@@ -178,15 +209,52 @@ body {
 
 /* Pop sticker shadow */
 .pop-shadow {
-  box-shadow: 3px 3px 0px rgba(25, 21, 16, 0.9);
+  box-shadow: 3px 3px 0px var(--ca-shadow, rgba(25, 21, 16, 0.9));
 }
 
 .pop-shadow-sm {
-  box-shadow: 2px 2px 0px rgba(25, 21, 16, 0.9);
+  box-shadow: 2px 2px 0px var(--ca-shadow, rgba(25, 21, 16, 0.9));
 }
 
 .pop-shadow-lg {
-  box-shadow: 5px 5px 0px rgba(25, 21, 16, 0.9);
+  box-shadow: 5px 5px 0px var(--ca-shadow, rgba(25, 21, 16, 0.9));
+}
+
+/* Dark mode card & component adaptations */
+html.dark .bg-white {
+  background-color: var(--ca-surface-card) !important;
+}
+
+html.dark .bg-\[\#F8F8F5\] {
+  background-color: var(--ca-surface) !important;
+}
+
+html.dark .bg-\[\#F7F7F5\] {
+  background-color: #17171c !important;
+}
+
+html.dark .bg-\[\#FFFFFF\] {
+  background-color: var(--ca-surface-card) !important;
+}
+
+html.dark .text-\[\#111111\] {
+  color: var(--ca-ink) !important;
+}
+
+html.dark .text-\[\#555552\],
+html.dark .text-\[\#666666\] {
+  color: #a8a29e !important;
+}
+
+html.dark .border-\[\#D9D9D4\],
+html.dark .border-\[\#E8E8E4\],
+html.dark .border-\[\#EFEFEA\] {
+  border-color: #2e2e38 !important;
+}
+
+html.dark .ca-tape {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Custom scrollbar */

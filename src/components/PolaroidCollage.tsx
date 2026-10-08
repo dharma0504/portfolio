@@ -211,7 +211,7 @@ export default function PolaroidCollage() {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative bg-white border-2 sm:border-3 border-[var(--ca-ink)] p-3.5 sm:p-6 max-w-lg w-full pop-shadow-lg max-h-[92vh] overflow-y-auto animate-in zoom-in-95 duration-200"
+            className="relative bg-[var(--ca-surface)] border-2 sm:border-3 border-[var(--ca-ink)] p-3.5 sm:p-6 max-w-lg w-full pop-shadow-lg max-h-[92vh] overflow-y-auto animate-in zoom-in-95 duration-200"
           >
             {/* Washi Tape on top */}
             <div className="ca-tape ca-tape-yellow -top-3.5 left-1/2 -translate-x-1/2 rotate-[-1deg]" />

@@ -21,7 +21,7 @@ export default function WhatsUpSection() {
             <div className="ca-tape ca-tape-yellow -top-3.5 -right-2 sm:-right-3 rotate-30" />
 
             {/* Polaroid Frame */}
-            <div className="bg-white border-2 border-[var(--ca-ink)] p-2.5 sm:p-3 pb-6 sm:pb-8 shadow-[4px_6px_0px_rgba(25,21,16,0.85)] sm:shadow-[5px_7px_0px_rgba(25,21,16,0.85)] group-hover:shadow-[7px_11px_0px_rgba(25,21,16,0.9)] transition-shadow">
+            <div className="bg-white border-2 border-[var(--ca-ink)] p-2.5 sm:p-3 pb-6 sm:pb-8 shadow-[4px_6px_0px_var(--ca-shadow)] sm:shadow-[5px_7px_0px_var(--ca-shadow)] group-hover:shadow-[7px_11px_0px_var(--ca-shadow)] transition-shadow">
               <div className="relative aspect-[3/4] w-full overflow-hidden border border-[var(--ca-ink)]/20 bg-[var(--ca-surface)]">
                 <Image
                   src="/pics/dharmatej_portrait.jpg"
@@ -44,7 +44,7 @@ export default function WhatsUpSection() {
           {/* Center Column: what's up box + Handwritten paragraph + 4 Torn Paper Badges */}
           <div className="flex flex-col items-center text-center max-w-xl mx-auto order-1 lg:order-2 w-full">
             {/* "what's up" Box */}
-            <div className="inline-block border-2 border-[var(--ca-ink)] bg-white/70 backdrop-blur-xs px-5 sm:px-6 py-1 shadow-[2px_2px_0px_rgba(25,21,16,0.85)] mb-5 sm:mb-8 select-none rotate-[-0.5deg]">
+            <div className="inline-block border-2 border-[var(--ca-ink)] bg-[var(--ca-surface)]/90 backdrop-blur-xs px-5 sm:px-6 py-1 shadow-[2px_2px_0px_var(--ca-shadow)] mb-5 sm:mb-8 select-none rotate-[-0.5deg]">
               <span className="font-heading font-medium text-base sm:text-xl text-[var(--ca-ink)] tracking-tight">
                 what&apos;s up
               </span>
@@ -116,7 +116,7 @@ export default function WhatsUpSection() {
             <div className="ca-tape ca-tape-yellow -top-3.5 -right-3 rotate-30" />
 
             {/* Polaroid Frame */}
-            <div className="bg-white border-2 border-[var(--ca-ink)] p-2.5 sm:p-3 pb-7 sm:pb-8 shadow-[5px_7px_0px_rgba(25,21,16,0.85)] group-hover:shadow-[7px_11px_0px_rgba(25,21,16,0.9)] transition-shadow">
+            <div className="bg-white border-2 border-[var(--ca-ink)] p-2.5 sm:p-3 pb-7 sm:pb-8 shadow-[5px_7px_0px_var(--ca-shadow)] group-hover:shadow-[7px_11px_0px_var(--ca-shadow)] transition-shadow">
               <div className="relative aspect-[3/4] w-full overflow-hidden border border-[var(--ca-ink)]/20 bg-[var(--ca-surface)]">
                 <Image
                   src="/pics/office_moment.jpg"
