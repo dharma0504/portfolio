@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           {/* Identity */}
           <div className="space-y-1">
-            <div className="font-heading font-extrabold text-lg tracking-tight text-[var(--ca-ink)]">
+            <div className="font-berghan text-lg tracking-wider text-[var(--ca-ink)]">
               DHARMATEJ MALLAMPATI
             </div>
             <div className="font-ca-mono text-xs text-[var(--ca-gray)]">

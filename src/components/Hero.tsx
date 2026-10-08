@@ -44,12 +44,12 @@ export default function Hero() {
             </span>
           </div>
 
-          {/* Center Name Box in Handjet Pixel Font */}
+          {/* Center Name Box in Berghan Font */}
           <div
             className="ca-doodle-box relative inline-block border-[2.5px] sm:border-[3.5px] px-3.5 py-1.5 xs:px-6 xs:py-2 sm:px-12 sm:py-4 bg-[var(--ca-surface)] shadow-md max-w-full overflow-hidden"
             style={{ borderColor: "var(--ca-orange)" }}
           >
-            <span className="font-pixel text-[34px] xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight sm:tracking-normal text-[var(--ca-ink)] leading-none select-none block">
+            <span className="font-berghan text-[34px] xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight sm:tracking-normal text-[var(--ca-ink)] leading-none select-none block uppercase">
               DHARMATEJ
             </span>
           </div>

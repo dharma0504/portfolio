@@ -24,8 +24,8 @@ export const personalInfo = {
   contact: {
     heading: "LET'S CONNECT",
     copy: "Interested in software engineering, backend systems, AI applications, or data platforms?",
-    email: "dharmatej.m@srmap.edu.in",
-    emailMailto: "dharmatej_m@srmap.edu.in",
+    email: "dharmatejmallampati@gmail.com",
+    emailMailto: "dharmatejmallampati@gmail.com",
     phone: "+91 9652731703",
     location: "Bangalore / Amaravati, India",
     linkedin: "https://www.linkedin.com/in/dharmatej-mallampati-47944724a/",

@@ -2,6 +2,14 @@
 @import "tailwindcss";
 
 @font-face {
+  font-family: 'Berghan';
+  src: url('/fonts/Berghan-Regular.otf') format('opentype');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Mojangles';
   src: url('/fonts/Mojangles.ttf') format('truetype');
   font-weight: 400;
@@ -106,9 +114,15 @@ body {
 }
 
 /* Typography classes */
+.font-name,
+.font-berghan {
+  font-family: 'Berghan', 'Space Grotesk', sans-serif;
+  letter-spacing: 0.05em;
+}
+
 .font-pixel,
 .ca-display {
-  font-family: 'Mojangles', 'Handjet', monospace;
+  font-family: 'Berghan', 'Mojangles', 'Handjet', monospace;
   font-weight: 700;
 }
 
