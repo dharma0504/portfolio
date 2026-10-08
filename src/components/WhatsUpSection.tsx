@@ -24,7 +24,7 @@ export default function WhatsUpSection() {
             <div className="bg-white border-2 border-[var(--ca-ink)] p-2.5 sm:p-3 pb-6 sm:pb-8 shadow-[4px_6px_0px_var(--ca-shadow)] sm:shadow-[5px_7px_0px_var(--ca-shadow)] group-hover:shadow-[7px_11px_0px_var(--ca-shadow)] transition-shadow">
               <div className="relative aspect-[3/4] w-full overflow-hidden border border-[var(--ca-ink)]/20 bg-[var(--ca-surface)]">
                 <Image
-                  src="/pics/dharmatej_portrait.jpg"
+                  src="/pics/IMG_6742.jpg"
                   alt="Dharmatej Mallampati"
                   fill
                   sizes="(max-width: 640px) 200px, 250px"
