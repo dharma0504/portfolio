@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
-import { ArrowUpRight, CheckCircle2, Sparkles } from "lucide-react";
+import { CheckCircle2, Sparkles } from "lucide-react";
 import { Project } from "@/types";
 import AgentFactoryFlow from "./diagrams/AgentFactoryFlow";
 import NexusArchitecture from "./diagrams/NexusArchitecture";
@@ -154,16 +153,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               ))}
             </div>
 
-            {/* View Project Link Button */}
-            <div className="pt-2">
-              <Link
-                href={`/projects/${project.slug}`}
-                className="inline-flex items-center gap-2 font-ca-mono text-xs sm:text-sm font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] border-b-2 border-current pb-1 hover:opacity-80 transition-opacity"
-              >
-                <span>VIEW CASE STUDY</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </Link>
-            </div>
           </div>
 
           {/* Technology Pills with Angled Cut-out */}
